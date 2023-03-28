@@ -24,7 +24,7 @@
                 <br>
                 <br>
                 <br>
-                <Button href="Marketing/HedgehogGame.html">Play</Button>
+                <Button href="./HedgehogGame.html">Play</Button>
             </Column>
         </Row>
     </Grid>
