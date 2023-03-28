@@ -41,6 +41,12 @@ jobs:
       - name: Build website
         run: npm run build
         
+      - name: Fix for relative path
+        run: |
+          sed -i 's/<script type="module" crossorigin src="\/assets\/index-88af12df.js"><\/script>/<script type="module" crossorigin src="\/assets\/Marketing\/index-88af12df.js"><\/script>/g' ./dist/index.html
+          sed -i 's/<link rel="stylesheet" href="\/assets\/index-178fee31.css">/<link rel="stylesheet" href="\/assets\/Marketing\/index-178fee31.css">/g' ./dist/index.html
+          sed -i 's/<link rel="icon" type="image\/svg+xml" href="\/vite.svg" \/>/<link rel="icon" type="image\/svg+xml" href="\/vite.svg" \/>/g' ./dist/index.html
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
