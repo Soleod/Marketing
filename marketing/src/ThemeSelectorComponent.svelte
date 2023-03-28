@@ -1,5 +1,5 @@
 <script>
-    import {Button, RadioButtonGroup, Theme} from "carbon-components-svelte";
+    import {Button, Theme} from "carbon-components-svelte";
     import {BrightnessContrast} from "carbon-icons-svelte";
 
     let possibleThemes = {
@@ -15,7 +15,7 @@
 
 <Theme bind:theme/>
 <div class="button_container">
-    <Button icon={BrightnessContrast} on:click={changeTheme}></Button>
+    <Button iconDescription="Color" icon={BrightnessContrast} on:click={changeTheme}/>
 </div>
 
 
